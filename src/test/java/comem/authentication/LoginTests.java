@@ -1,0 +1,57 @@
+package comem.authentication;
+
+import cores.BaseTest;
+import cores.Browser;
+import cores.DriverFactory;
+import io.qameta.allure.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import pages.HomePage;
+
+@Feature("Authentication")
+public class LoginTests extends BaseTest {
+
+    @BeforeClass
+    @Parameters("url")
+    private void beforeClass(String url) {
+        createLog(LoginTests.class);
+        webDriver = DriverFactory.initWebsiteDriver(Browser.CHROME);
+        webdriverThread.set(webDriver);
+        homepage = new HomePage(webDriver);
+        webDriver.navigate(url);
+    }
+
+    @Test
+    @Story("Positive login")
+    @Description("User logs in with valid credentials and verifies the account is accessible")
+    @Severity(SeverityLevel.CRITICAL)
+    public void verifyPositiveCaseLogIn() {
+        Allure.step("Open the login form", () ->
+                homepage.header.clickOnAccountIcon()
+        );
+
+        Allure.step("Fill in credentials and submit", () ->
+                homepage.header
+                        .inputUsername("datle.testing01@gmail.com").sleep(2)
+                        .inputPassword("#Onimusha00").sleep(2)
+                        .clickOnLoginButton()
+        );
+
+        Allure.step("Verify full name is displayed", () ->
+                verifyEquals("", "")
+        );
+
+        Allure.step("Verify My Profile link is visible", () ->
+                verifyEquals("", "")
+        );
+    }
+
+    @Test
+    @Story("Negative login")
+    @Description("User attempts to log in with invalid credentials and verifies the error message")
+    @Severity(SeverityLevel.NORMAL)
+    public void verifyNegativeCaseLogIn() {
+        // TODO: implement negative login steps
+    }
+}

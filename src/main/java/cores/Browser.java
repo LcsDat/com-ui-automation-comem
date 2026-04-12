@@ -13,7 +13,11 @@ public enum Browser {
     CHROME, FIREFOX, EDGE, HEADLESSCHROME, HEADLESSFIREFOX, HEADLESSEDGE;
 
     public WebDriver initChromeDriver() {
-        return new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
+        return new ChromeDriver(options);
     }
 
     public WebDriver initFirefoxDriver() {
@@ -26,8 +30,11 @@ public enum Browser {
 
     public WebDriver initHeadlessChromeDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"
-                ,"--window-size=1920,1080");
+        options.addArguments("--headless=new",
+                "--window-size=1920,1080",
+                "--disable-blink-features=AutomationControlled");
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
         return new ChromeDriver(options);
     }
 

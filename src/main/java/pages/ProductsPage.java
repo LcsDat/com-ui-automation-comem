@@ -2,7 +2,7 @@ package pages;
 
 import cores.WebsiteDriver;
 
-public class ProductsPage extends HomeProductCommons {
+public class ProductsPage extends HomePageComponents {
 
     public ProductsPage(WebsiteDriver driver) {
         super(driver);

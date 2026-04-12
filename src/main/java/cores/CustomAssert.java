@@ -49,12 +49,12 @@ public class CustomAssert extends Assert {
 
         try {
             assertTrue(condition);
-            System.out.printf(passFormat + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultTrue, GlobalVariables.ANSIReset, GlobalVariables.ansiGreen, pass, GlobalVariables.ANSIReset);
+            System.out.printf(passFormat + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultTrue, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_GREEN, pass, GlobalVariables.ANSI_RESET);
         } catch (Throwable e) {
             result = false;
 
             System.out.printf(failFormat
-                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultTrue, GlobalVariables.ANSIReset, GlobalVariables.ANSIRed, fail, GlobalVariables.ANSIReset, getClassName(e), getMethodName(e), GlobalVariables.WORDOrange, e.getMessage(), GlobalVariables.WORDReset, getTargetStackElement(e).getFileName(), getLineNumber(e));
+                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultTrue, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_RED, fail, GlobalVariables.ANSI_RESET, getClassName(e), getMethodName(e), GlobalVariables.WORD_ORANGE, e.getMessage(), GlobalVariables.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
         }
         return result;
     }
@@ -63,11 +63,11 @@ public class CustomAssert extends Assert {
         boolean result = true;
         try {
             assertTrue(condition);
-            System.out.printf(passFormat + " | " + GlobalVariables.ANSIYellow + message + GlobalVariables.ANSIReset + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultTrue, GlobalVariables.ANSIReset, GlobalVariables.ansiGreen, pass, GlobalVariables.ANSIReset);
+            System.out.printf(passFormat + " | " + GlobalVariables.ANSI_YELLOW + message + GlobalVariables.ANSI_RESET + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultTrue, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_GREEN, pass, GlobalVariables.ANSI_RESET);
         } catch (Throwable e) {
             result = false;
             System.out.printf(failFormat
-                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultTrue, GlobalVariables.ANSIReset, GlobalVariables.ANSIRed, fail, GlobalVariables.ANSIReset, getClassName(e), getMethodName(e), GlobalVariables.WORDOrange, e.getMessage(), GlobalVariables.WORDReset, getTargetStackElement(e).getFileName(), getLineNumber(e));
+                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultTrue, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_RED, fail, GlobalVariables.ANSI_RESET, getClassName(e), getMethodName(e), GlobalVariables.WORD_ORANGE, e.getMessage(), GlobalVariables.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
         }
         return result;
     }
@@ -76,11 +76,11 @@ public class CustomAssert extends Assert {
         boolean result = false;
         try {
             assertFalse(condition);
-            System.out.printf(passFormat + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultFalse, GlobalVariables.ANSIReset, GlobalVariables.ansiGreen, pass, GlobalVariables.ANSIReset);
+            System.out.printf(passFormat + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultFalse, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_GREEN, pass, GlobalVariables.ANSI_RESET);
         } catch (Throwable e) {
             result = true;
             System.out.printf(failFormat
-                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultFalse, GlobalVariables.ANSIReset, GlobalVariables.ANSIRed, fail, GlobalVariables.ANSIReset, getClassName(e), getMethodName(e), GlobalVariables.WORDOrange, e.getMessage(), GlobalVariables.WORDReset, getTargetStackElement(e).getFileName(), getLineNumber(e));
+                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultFalse, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_RED, fail, GlobalVariables.ANSI_RESET, getClassName(e), getMethodName(e), GlobalVariables.WORD_ORANGE, e.getMessage(), GlobalVariables.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
         }
         return result;
     }
@@ -89,11 +89,11 @@ public class CustomAssert extends Assert {
         boolean result = false;
         try {
             assertFalse(condition);
-            System.out.printf(passFormat + " | " + GlobalVariables.ANSIYellow + message + GlobalVariables.ANSIReset + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultFalse, GlobalVariables.ANSIReset, GlobalVariables.ansiGreen, pass, GlobalVariables.ANSIReset);
+            System.out.printf(passFormat + " | " + GlobalVariables.ANSI_YELLOW + message + GlobalVariables.ANSI_RESET + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultFalse, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_GREEN, pass, GlobalVariables.ANSI_RESET);
         } catch (Throwable e) {
             result = true;
             System.out.printf(failFormat
-                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultFalse, GlobalVariables.ANSIReset, GlobalVariables.ANSIRed, fail, GlobalVariables.ANSIReset, getClassName(e), getMethodName(e), GlobalVariables.WORDOrange, e.getMessage(), GlobalVariables.WORDReset, getTargetStackElement(e).getFileName(), getLineNumber(e));
+                    , GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultFalse, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_RED, fail, GlobalVariables.ANSI_RESET, getClassName(e), getMethodName(e), GlobalVariables.WORD_ORANGE, e.getMessage(), GlobalVariables.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
         }
         return result;
     }
@@ -102,10 +102,10 @@ public class CustomAssert extends Assert {
 
         try {
             assertEquals(actual, expected);
-            System.out.printf(passFormat + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultEqual, GlobalVariables.ANSIReset, GlobalVariables.ansiGreen, pass, GlobalVariables.ANSIReset);
+            System.out.printf(passFormat + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultEqual, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_GREEN, pass, GlobalVariables.ANSI_RESET);
         } catch (AssertionError e) {
             System.out.printf(failFormat,
-                    GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultEqual, GlobalVariables.ANSIReset, GlobalVariables.ANSIRed, fail, GlobalVariables.ANSIReset, getClassName(e), getMethodName(e), GlobalVariables.WORDOrange, e.getMessage(), GlobalVariables.WORDReset, getTargetStackElement(e).getFileName(), getLineNumber(e));
+                    GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultEqual, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_RED, fail, GlobalVariables.ANSI_RESET, getClassName(e), getMethodName(e), GlobalVariables.WORD_ORANGE, e.getMessage(), GlobalVariables.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
         }
     }
 
@@ -113,10 +113,10 @@ public class CustomAssert extends Assert {
 
         try {
             assertEquals(actual, expected);
-            System.out.printf(passFormat + " | " + GlobalVariables.ANSIYellow + message + GlobalVariables.ANSIReset + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultEqual, GlobalVariables.ANSIReset, GlobalVariables.ansiGreen, pass, GlobalVariables.ANSIReset);
+            System.out.printf(passFormat + " | " + GlobalVariables.ANSI_YELLOW + message + GlobalVariables.ANSI_RESET + "%n", GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultEqual, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_GREEN, pass, GlobalVariables.ANSI_RESET);
         } catch (AssertionError e) {
             System.out.printf(failFormat,
-                    GlobalVariables.CLOCK_ICON, GlobalVariables.ANSIBoldCyan, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSIReset, GlobalVariables.ANSIBoldCyan, defaultEqual, GlobalVariables.ANSIReset, GlobalVariables.ANSIRed, fail, GlobalVariables.ANSIReset, getClassName(e), getMethodName(e), GlobalVariables.WORDOrange, e.getMessage(), GlobalVariables.WORDReset, getTargetStackElement(e).getFileName(), getLineNumber(e));
+                    GlobalVariables.CLOCK_ICON, GlobalVariables.ANSI_BOLD_CYAN, GlobalVariables.FORMAT_TIME, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_BOLD_CYAN, defaultEqual, GlobalVariables.ANSI_RESET, GlobalVariables.ANSI_RED, fail, GlobalVariables.ANSI_RESET, getClassName(e), getMethodName(e), GlobalVariables.WORD_ORANGE, e.getMessage(), GlobalVariables.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
         }
     }
 

@@ -1,14 +1,18 @@
 package cores;
 
+import components.HeaderComponent;
 import org.openqa.selenium.NoSuchElementException;
 
 import java.time.Duration;
 
-public class BasePage {
+public class BasePage<T extends BasePage<T>> {
     protected WebsiteDriver driver;
+
+
 
     public BasePage(WebsiteDriver driver) {
         this.driver = driver;
+
     }
 
     private static final String LOGIN_DIALOG_CLOSE_BUTTON = "button[aria-label='Close notify form']";
