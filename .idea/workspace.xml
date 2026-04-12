@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f55db7b7-bacc-489b-8c7c-9c62208d3fe3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LcsDat&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:LcsDat/Automation-Testing.git&quot;,
+    &quot;accountId&quot;: &quot;3844a43d-ffa5-4079-b755-2599009cb287&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/4.30.0/selenium-api-4.30.0-sources.jar!/org/openqa/selenium/Keys.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2xFZzSPhS1uuxOEwinY76mTUyms" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Demo1.executor": "Run",
+    "Application.ExcelManager.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "/Users/hideyashy/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/Shell Script/shellcheck",
+    "TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml.executor": "Run",
+    "TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml.executor": "Run",
+    "TestNG.D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml.executor": "Run",
+    "TestNG.D:/Work/Training/Automation-Testing/src/main/resources/demo.xml.executor": "Run",
+    "TestNG.Demo1.test.executor": "Run",
+    "TestNG.Demo2.executor": "Run",
+    "TestNG.Demo2.testGoogleSearch.executor": "Run",
+    "TestNG.ExcelManager.test.executor": "Run",
+    "TestNG.User_Order_One_Product.TC01_Order_A_Product_Successfully.executor": "Run",
+    "TestNG.User_Order_One_Product.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "LcsDat",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.32669684",
+    "settings.editor.selected.configurable": "terminal"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\Automation\IntelliJ\Automation-Testing\src\main\resources" />
+      <recent name="D:\Work\Automation\IntelliJ\Automation-Testing\src\main\java\logConfig" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hasaki.accountManagement" />
+      <recent name="hasaki.OrderFlow" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml">
+    <configuration name="Demo1" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo1" />
+      <module name="com-ui-comem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com-ui-comem" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/HasakiTestRunner.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com-ui-comem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Demo2" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="User_Order_One_Product.TC01_Order_A_Product_Successfully" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com-ui-comem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hasaki.OrderFlow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/HasakiTestRunner.xml" />
+      <option name="PACKAGE_NAME" value="hasaki.OrderFlow" />
+      <option name="MAIN_CLASS_NAME" value="hasaki.OrderFlow.User_Order_One_Product" />
+      <option name="METHOD_NAME" value="TC01_Order_A_Product_Successfully" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="2" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com-ui-comem" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/CoMemTestRunner.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com-ui-comem" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/LouisVuitonTestRunner.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml" />
+        <item itemvalue="TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml" />
+        <item itemvalue="TestNG.D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml" />
+        <item itemvalue="TestNG.User_Order_One_Product.TC01_Order_A_Product_Successfully" />
+        <item itemvalue="TestNG.Demo2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.33" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f55db7b7-bacc-489b-8c7c-9c62208d3fe3" name="Changes" comment="" />
+      <created>1747358853710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747358853710</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:org.testng:testng" />
+    <option featureType="dependencySupport" implementationName="java:io.reactivex.rxjava3:rxjava" />
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

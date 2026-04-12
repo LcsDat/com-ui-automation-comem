@@ -1,0 +1,10 @@
+Important points:
+- Homepage and ProductPage use same locators
+- Other pages, the locators may be different to Homepage and ProductPage
+- Login page is a type of popup, and it is displayed  when the user order a product/ user actively log in
+- Using Category hamburger menu or Category footer will navigate to Category page
+
+write method to handle hamber menu:
+- hover parent menu
+- identify which parent menu have sub menu (have an arrow on the right)
+- click on product type. If have sub menu, click product type on sub menu

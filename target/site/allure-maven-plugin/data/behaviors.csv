@@ -1,0 +1,3 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Authentication","Negative login","0","0","1","0","0"
+"","Authentication","Positive login","0","0","1","0","0"
