@@ -1,0 +1,8 @@
+2025-04-24 15:16:55 INFO Info log message
+2025-04-24 15:16:55 ERROR Error log message
+2025-04-24 15:17:48 INFO Info log message
+2025-04-24 15:17:48 ERROR Error log message
+{"@timestamp":"2025-04-24T08:18:49.002Z","ecs.version":"1.2.0","log.level":"INFO","message":"Info log message","process.thread.name":"main","log.logger":"Demo1"}
+{"@timestamp":"2025-04-24T08:18:49.004Z","ecs.version":"1.2.0","log.level":"ERROR","message":"Error log message","process.thread.name":"main","log.logger":"Demo1"}
+{"instant":"2025-04-24T08:22:11.287Z","someConstant":1,"message":"Info log message"}
+{"instant":"2025-04-24T08:22:11.290Z","someConstant":1,"message":"Error log message"}
