@@ -177,26 +177,26 @@ public class BaseTest {
 
     //Simple verify
     protected boolean verifyTrue(boolean condition) {
-        return new CustomAssert(GlobalVariables.HASAKI_KEYWORD).verifyTrue(condition);
+        return new CustomAssert(GlobalVariables.COMEM_KEYWORD).verifyTrue(condition);
     }
 
     protected boolean verifyTrue(boolean condition, String message) {
-        return new CustomAssert(GlobalVariables.HASAKI_KEYWORD).verifyTrue(condition, message);
+        return new CustomAssert(GlobalVariables.COMEM_KEYWORD).verifyTrue(condition, message);
     }
 
     protected boolean verifyFalse(boolean condition) {
-        return new CustomAssert(GlobalVariables.HASAKI_KEYWORD).verifyFalse(condition);
+        return new CustomAssert(GlobalVariables.COMEM_KEYWORD).verifyFalse(condition);
     }
 
     protected boolean verifyFalse(boolean condition, String message) {
-        return new CustomAssert(GlobalVariables.HASAKI_KEYWORD).verifyFalse(condition, message);
+        return new CustomAssert(GlobalVariables.COMEM_KEYWORD).verifyFalse(condition, message);
     }
 
     protected void verifyEquals(Object actual, Object expected, String message) {
-        new CustomAssert(GlobalVariables.HASAKI_KEYWORD).verifyEquals(actual, expected, message);
+        new CustomAssert(GlobalVariables.COMEM_KEYWORD).verifyEquals(actual, expected, message);
     }
 
     protected void verifyEquals(Object actual, Object expected) {
-        new CustomAssert(GlobalVariables.HASAKI_KEYWORD).verifyEquals(actual, expected);
+        new CustomAssert(GlobalVariables.COMEM_KEYWORD).verifyEquals(actual, expected);
     }
 }

@@ -33,17 +33,19 @@ public class LoginTests extends BaseTest {
 
         Allure.step("Fill in credentials and submit", () ->
                 homepage.header
-                        .inputUsername("datle.testing01@gmail.com").sleep(2)
-                        .inputPassword("#Onimusha00").sleep(2)
+                        .inputUsername("datle.testing01@gmail.com")
+                        .inputPassword("#Onimusha00")
                         .clickOnLoginButton()
+
+        );
+
+        homepage.header.hoverPersonIcon().clickOnPersonalInformationLink();
+        Allure.step("Verify email is displayed", () ->
+                verifyEquals(homepage.header.getEmailValue(), "datle.testing01@gmail.com")
         );
 
         Allure.step("Verify full name is displayed", () ->
-                verifyEquals("", "")
-        );
-
-        Allure.step("Verify My Profile link is visible", () ->
-                verifyEquals("", "")
+                verifyEquals(homepage.header.getNameValue(), "Lê Châu Sỷ Đạt")
         );
     }
 

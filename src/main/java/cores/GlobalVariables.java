@@ -21,7 +21,7 @@ public final class GlobalVariables {
     public static final String WORD_ORANGE = "\033[38:5:208m";
     public static final String WORD_RESET = "\033[m";
 
-    public static final String HASAKI_KEYWORD = "hasaki";
+    public static final String COMEM_KEYWORD = "comem";
 
     public static final String FORMAT_TIME = new SimpleDateFormat("hh:mm:ss a", Locale.US).format(new Date());
 }

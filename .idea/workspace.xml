@@ -5,7 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f55db7b7-bacc-489b-8c7c-9c62208d3fe3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/components/HeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/HeaderComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cores/BaseComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BaseComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cores/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cores/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cores/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/GlobalVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/comem/authentication/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comem/authentication/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Refactor.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestCases.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/components/HeaderComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/components/HeaderComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/BaseComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/BaseComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/Browser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/CustomAssert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/CustomAssert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/TestNGListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/TestNGListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/WebsiteDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/WebsiteDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/demo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/infrastructure/logs/Log4j2Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/infrastructure/logs/Log4j2Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/ExcelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/ExcelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/TestData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/comem/authentication/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/comem/authentication/LoginTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +103,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.32669684",
-    "settings.editor.selected.configurable": "terminal"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">

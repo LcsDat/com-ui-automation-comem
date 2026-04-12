@@ -29,4 +29,13 @@ public abstract class BaseComponent<T extends BaseComponent<T>> {
         driver.setText(locator, value);
         return self();
     }
+
+    public T hover(String locator) {
+        driver.moveToElement(locator);
+        return self();
+    }
+
+    public String getDomAttributeValue (String locator, String attributeValue) {
+        return  driver.getDomAttribute(locator, attributeValue);
+    }
 }
