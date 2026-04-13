@@ -2,7 +2,9 @@ package infrastructure.reports;
 
 import cores.BaseTest;
 import cores.BrowserDriver;
+import infrastructure.logs.Log4j2Manager;
 import io.qameta.allure.Allure;
+import org.apache.logging.log4j.Logger;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
@@ -41,11 +43,12 @@ import java.util.stream.Stream;
  *
  * To open a specific report, just open the HTML file directly in any browser.
  */
-public class AllureListener implements ITestListener, ISuiteListener {
+public class AllureListener extends  BaseTest implements ITestListener, ISuiteListener {
 
     private static final int MAX_RECORDS = 20;
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
     private String currentTimestamp;
+    private Logger logger = Log4j2Manager.getLogger(AllureListener.class).getInfoLogger();
 
     // ── Suite lifecycle ────────────────────────────────────────────────────────
 
@@ -86,7 +89,6 @@ public class AllureListener implements ITestListener, ISuiteListener {
             // Generate a self-contained single-file HTML report into a temp folder
             new ProcessBuilder("allure", "generate", "--single-file",
                     resultsPath.toString(), "-o", tempDir.toString(), "--clean")
-                    .inheritIO()
                     .start()
                     .waitFor();
 
@@ -94,13 +96,13 @@ public class AllureListener implements ITestListener, ISuiteListener {
             Path generatedFile = tempDir.resolve("index.html");
             if (Files.exists(generatedFile)) {
                 Files.move(generatedFile, reportFile);
-                System.out.println("[AllureListener] Single-file report saved → " + reportFile);
+                logger.info("[AllureListener] Single-file report saved → " + reportFile);
             } else {
-                System.err.println("[AllureListener] Single-file report not found at " + generatedFile);
+                logger.error("[AllureListener] Single-file report not found at " + generatedFile);
             }
 
         } catch (Exception e) {
-            System.err.println("[AllureListener] Could not generate report: " + e.getMessage());
+            logger.error("[AllureListener] Could not generate report: " + e.getMessage());
         } finally {
             if (Files.exists(tempDir)) {
                 deleteFolder(tempDir);
@@ -117,9 +119,9 @@ public class AllureListener implements ITestListener, ISuiteListener {
         try {
             Files.createDirectories(getArchivesDir());
             resultsPath.toFile().renameTo(archive.toFile());
-            System.out.println("[AllureListener] Results archived → " + archive);
+            logger.info("[AllureListener] Results archived → " + archive);
         } catch (IOException e) {
-            System.err.println("[AllureListener] Could not archive results: " + e.getMessage());
+            logger.error("[AllureListener] Could not archive results: " + e.getMessage());
         }
     }
 
@@ -137,7 +139,7 @@ public class AllureListener implements ITestListener, ISuiteListener {
                 deleteFolder(folders.remove(0));
             }
         } catch (IOException e) {
-            System.err.println("[AllureListener] Could not clean old folders: " + e.getMessage());
+            logger.error("[AllureListener] Could not clean old folders: " + e.getMessage());
         }
     }
 
@@ -155,22 +157,22 @@ public class AllureListener implements ITestListener, ISuiteListener {
                 Path oldest = files.remove(0);
                 try {
                     Files.delete(oldest);
-                    System.out.println("[AllureListener] Deleted oldest report → " + oldest);
+                    logger.info("[AllureListener] Deleted oldest report → " + oldest);
                 } catch (IOException e) {
-                    System.err.println("[AllureListener] Could not delete file: " + oldest);
+                    logger.error("[AllureListener] Could not delete file: " + oldest);
                 }
             }
         } catch (IOException e) {
-            System.err.println("[AllureListener] Could not clean old files: " + e.getMessage());
+            logger.error("[AllureListener] Could not clean old files: " + e.getMessage());
         }
     }
 
     private void deleteFolder(Path folder) {
         try (Stream<Path> files = Files.walk(folder)) {
             files.sorted(Comparator.reverseOrder()).forEach(f -> f.toFile().delete());
-            System.out.println("[AllureListener] Deleted oldest record → " + folder);
+            logger.info("[AllureListener] Deleted oldest record → " + folder);
         } catch (IOException e) {
-            System.err.println("[AllureListener] Could not delete folder: " + folder);
+            logger.error("[AllureListener] Could not delete folder: " + folder);
         }
     }
 
