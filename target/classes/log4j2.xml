@@ -2,9 +2,9 @@
 <Configuration status="WARN">
     <Properties>
         <!-- ANSI color codes -->
-        <Property name="CONSOLE_LOG_INFO_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]   %highlight{%level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=bright blue, DEBUG=cyan, TRACE=green}     %-50logger{50} |   %style{%msg%n}{bright,yellow} </Property>
-        <Property name="CONSOLE_LOG_ASSERT_PASS_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]    ✅       %-50logger{50} |   %style{%msg%n}{bright,green}</Property>
-        <Property name="CONSOLE_LOG_ASSERT_FAIL_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]    ❌       %-50logger{50} |   %style{%msg%n}{bright,red}</Property>
+        <Property name="CONSOLE_LOG_INFO_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]   %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=bright blue, DEBUG=cyan, TRACE=green}   %-50logger{50}    %style{%msg%n}{bright,yellow} </Property>
+        <Property name="CONSOLE_LOG_ASSERT_PASS_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]   ✅      %-50logger{50}    %style{%msg%n}{bright,green}</Property>
+        <Property name="CONSOLE_LOG_ASSERT_FAIL_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]   ❌      %-50logger{50}    %style{%msg%n}{bright,red}</Property>
 
     </Properties>
     <Appenders>

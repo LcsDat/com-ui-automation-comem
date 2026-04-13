@@ -1,6 +1,7 @@
 package cores;
 
 import infrastructure.logs.Log4j2Manager;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.InvalidSelectorException;
 import org.testng.annotations.AfterSuite;
 import pages.*;
@@ -38,40 +39,15 @@ public class BaseTest {
         driverThread.remove();
     }
 
-    protected void navigateToHomePage() {
-        pause(1);
-        if (webDriver.getPageTitle().startsWith("Hasaki.vn")) webDriver.click("div.logo_site");
-        else webDriver.waitUntilClickable("a[aria-label='Homepage']").click();
-    }
-
-    /**
-     * Default, User is navigated back in Homepage before log out.
-     */
-    protected void logout() {
-        if (webDriver.isNotDisplayed("#btn-login")) {
-            try {
-                webDriver.moveToElement("div.item_header.item_login.user_login");
-            } catch (InvalidSelectorException e) {
-                webDriver.moveToElement("//a[text()='Tài khoản ']");
-            }
-
-            webDriver.findElement("//a[contains(text(),'Thoát')]").click();
-        }
-    }
-
-    protected void quitBrowser() {
-        if (webDriver != null) webDriver.quit();
-    }
-
-
     //Logging methods ***********************************************************
     protected void initLogger(Class<?> clazz) {
         log4j2Manager = Log4j2Manager.getLogger(clazz);
     }
 
-    protected void logInfo(String description) {
+    protected void logInfo(String description, Allure.ThrowableRunnableVoid runnable) {
         var className = this.getClass().getName();
         log4j2Manager.getInfoLogger(className).info(description);
+        Allure.step(description, runnable);
     }
 
     //Util methods ***********************************************************

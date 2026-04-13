@@ -25,11 +25,11 @@ public class LoginTests extends BaseTest {
     @Description("User logs in with valid credentials and verifies the account is accessible")
     @Severity(SeverityLevel.CRITICAL)
     public void verifyPositiveCaseLogIn() {
-        Allure.step("Open the login form", () ->
+        logInfo("Open the login form", () ->
                 homepage.header.clickOnAccountIcon()
         );
 
-        Allure.step("Fill in credentials and submit", () ->
+        logInfo("Fill in credentials and submit", () ->
                 homepage.header
                         .inputUsername("datle.testing01@gmail.com")
                         .inputPassword("#Onimusha00")
@@ -40,11 +40,11 @@ public class LoginTests extends BaseTest {
         );
 
 //        homepage.header;
-        Allure.step("Verify email is displayed", () ->
+        logInfo("Verify email is displayed", () ->
                 assertEquals(homepage.header.getValue(homepage.header.EMAIL_FIELD), "datle.testing01@gmail.com")
         );
 
-        Allure.step("Verify full name is displayed", () ->
+        logInfo("Verify full name is displayed", () ->
                 assertEquals(homepage.header.getValue(homepage.header.NAME_FIELD), "Lê Châu Sỷ Đạt")
         );
     }

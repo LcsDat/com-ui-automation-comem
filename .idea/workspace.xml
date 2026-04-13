@@ -5,36 +5,200 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f55db7b7-bacc-489b-8c7c-9c62208d3fe3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/HeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/HeaderComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/BaseComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BaseComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cores/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/Browser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/CustomAssert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/LoggingAssert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/ExplicitWait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/WaitHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/PageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/PageProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/TestNGListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/WebsiteActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/ActionsHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/WebsiteDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BrowserDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/WebsiteElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/UIElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/infrastructure/reports/AllureListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/infrastructure/reports/AllureListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/FAQPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FAQPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePageComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePageComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PaymentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/StoresLocationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/StoresLocationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Demo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/comem/authentication/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comem/authentication/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/5e9a8e6c-8a22-4b5e-9fd4-551f2583644a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Demo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Demo1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-reports/report-2026-04-13_11-44-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-reports/report-2026-04-13_11-46-21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-reports/report-2026-04-13_12-36-32.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/1243fd88-3f96-47df-9a48-c589be9f9f09-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/1c465e17-d0f8-4fed-bca7-40609e9978e5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/466f4245-28cb-4f00-ac9f-0b958ab3e489-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/6f266bf4-8555-4fb1-ad4c-6d76b203fa0a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/91c8e21f-7301-4a20-acbe-04adbce6b690-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/9c1c05d3-0490-4fcb-916c-8153b1d4c35a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/c1eefa13-fecd-48fb-b8f2-0f449b81a4b5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/d8935910-f2d7-46b9-ae3d-d8693e73943f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-18-30/fe98458c-bfa2-457c-88e7-84fda1c21af9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-27-46/1ecf33bf-c885-4968-9870-cd0952e226e0-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-27-46/32f375c8-cac6-4582-b1b6-0fe17864181d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-27-46/7d6f894d-57ea-408a-a985-e1305b372964-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-27-46/e87d17d1-9321-4133-a7dc-16c3bf3be1c8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-27-46/fa5031ce-24c8-4af1-b213-677e73d665f9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-44-12/1c0c9ff3-d2f4-4478-86fb-a0adc0f4f68f-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-44-12/439540ca-7475-4b4e-8616-4c1642f35f3a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-44-12/9ce3e493-29f0-480e-a9b6-04be97ae694a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-44-12/a64cdbc1-7290-4e79-aa18-427f9f09ebd4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-44-12/f6b2bb9f-37b0-42f6-9b7a-14f6ce01d126-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-46-21/06d66080-aaa4-4e8d-b136-70922edb6069-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-46-21/2ddac5c3-c48f-4648-be59-6847c3bf1464-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-46-21/363a2be5-b633-4e89-8b00-23e9bba4bf69-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-46-21/6560c477-b7bd-4210-bb64-1ec57282dd30-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_11-46-21/d7b86909-3f58-4b74-9615-8a4f4be54007-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_12-36-32/4da3faf7-17c0-4e99-90e0-646d8694d1bf-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_12-36-32/5e9a8e6c-8a22-4b5e-9fd4-551f2583644a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_12-36-32/903640c0-c673-4d2b-9eac-a1983c47260d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_12-36-32/9bdca475-58e9-47cb-92b6-3929cb6e4cd8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_12-36-32/9e82a4d8-0f15-4e7f-9f31-cd1cc00d1c1c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results-archives/allure-results-2026-04-13_12-36-32/dc436796-9322-4952-b0cf-20fc59529ccb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/bf6e664e-876f-40e2-b4a5-82f19104163c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CoMemTestRunner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestCaseReference.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/components/HeaderComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/ActionsHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/BaseComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/BasePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/BaseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/Browser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/BrowserDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/DriverFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/DriverFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/LoggingAssert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/PageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/UIElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cores/WaitHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/infrastructure/logs/Log4j2Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/infrastructure/reports/AllureListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/layout.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/AccountPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/CartPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/FAQPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePageComponents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/PaymentPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/ProductDetailsPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/ProductsPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/StoresLocationPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/ExcelData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/ExcelManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/SheetNames$Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/SheetNames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/TestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/allure-maven.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/css/apache-maven-fluido-2.0.0-M9.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/css/print.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/css/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/behaviors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/packages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/suites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/test-cases/7ef8f50739d25a66.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/test-cases/d3da7b801463db18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/data/timeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/export/influxDbData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/export/mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/export/prometheusData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/accessories-text-editor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/add.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/apache-maven-project-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/application-certificate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/contact-new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/document-properties.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/drive-harddisk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/fix.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/icon_error_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/icon_help_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/icon_info_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/icon_success_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/icon_warning_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/image-x-generic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/internet-web-browser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/logos/build-by-maven-black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/logos/build-by-maven-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/logos/maven-feather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/network-server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/package-x-generic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/profiles/pre-release.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/profiles/retired.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/profiles/sandbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/remove.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/rss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/update.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/images/window-new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/img/glyphicons-halflings-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/img/glyphicons-halflings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/js/apache-maven-fluido-2.0.0-M9.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/plugin/behaviors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/plugin/packages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/plugin/screen-diff/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/plugin/screen-diff/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/duration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/executors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/severity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/status-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/allure-maven-plugin/widgets/summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Suite1/Co Mem on Chrome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Suite1/Co Mem on Chrome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bullet_point.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/collapseall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/failed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/jquery-3.6.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-comem.authentication.LoginTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/navigator-bullet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/Co Mem on Chrome.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/methods-alphabetical.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/methods-not-run.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/methods.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/reporter-output.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/testng.xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/toc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/passed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/skipped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Demo1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/comem/authentication/LoginTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,41 +242,41 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Demo1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExcelManager.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/hideyashy/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/Shell Script/shellcheck&quot;,
-    &quot;TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Work/Training/Automation-Testing/src/main/resources/demo.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.Demo1.test.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.Demo2.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.Demo2.testGoogleSearch.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ExcelManager.test.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginTests.verifyPositiveCaseLogIn.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.User_Order_One_Product.TC01_Order_A_Product_Successfully.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.User_Order_One_Product.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LcsDat&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32669684&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Demo1.executor": "Run",
+    "Application.ExcelManager.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "/Users/hideyashy/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/Shell Script/shellcheck",
+    "TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml.executor": "Run",
+    "TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml.executor": "Run",
+    "TestNG.D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml.executor": "Run",
+    "TestNG.D:/Work/Training/Automation-Testing/src/main/resources/demo.xml.executor": "Run",
+    "TestNG.Demo1.test.executor": "Run",
+    "TestNG.Demo2.executor": "Run",
+    "TestNG.Demo2.testGoogleSearch.executor": "Run",
+    "TestNG.ExcelManager.test.executor": "Run",
+    "TestNG.LoginTests.verifyPositiveCaseLogIn.executor": "Run",
+    "TestNG.User_Order_One_Product.TC01_Order_A_Product_Successfully.executor": "Run",
+    "TestNG.User_Order_One_Product.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "LcsDat",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.32669684",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
