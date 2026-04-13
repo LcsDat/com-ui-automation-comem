@@ -3,17 +3,13 @@ import cores.DriverFactory;
 import cores.WebsiteDriver;
 import org.openqa.selenium.Keys;
 
+import java.nio.file.Paths;
+
 public class Demo1 {
 
     public static void main(String[] args) {
 
-        String searchLocator = "//textarea[@title='Tìm kiếm']";
-
-        System.out.println(System.getProperty("os.name"));
-        WebsiteDriver driver = DriverFactory.initWebsiteDriver(Browser.CHROME);
-        driver.navigate("http://www.google.com");
-        driver.setText(searchLocator, "hello world");
-        driver.sendKeys(searchLocator, Keys.chord(Keys.COMMAND, Keys.LEFT));
+    System.out.println(Paths.get(System.getProperty("allure.results.directory", "allure-results")));
 
     }
     public void hel(){}

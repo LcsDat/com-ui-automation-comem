@@ -5,6 +5,7 @@ import cores.Browser;
 import cores.DriverFactory;
 import io.qameta.allure.*;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -36,16 +37,18 @@ public class LoginTests extends BaseTest {
                         .inputUsername("datle.testing01@gmail.com")
                         .inputPassword("#Onimusha00")
                         .clickOnLoginButton()
+                        .hoverPersonIcon()
+                        .clickOnPersonalInformationLink()
 
         );
 
-        homepage.header.hoverPersonIcon().clickOnPersonalInformationLink();
+//        homepage.header;
         Allure.step("Verify email is displayed", () ->
-                verifyEquals(homepage.header.getEmailValue(), "datle.testing01@gmail.com")
+                assertEquals(homepage.header.getValue(homepage.header.EMAIL_FIELD), "datle.testing01@gmail.com")
         );
 
         Allure.step("Verify full name is displayed", () ->
-                verifyEquals(homepage.header.getNameValue(), "Lê Châu Sỷ Đạt")
+                assertEquals(homepage.header.getValue(homepage.header.NAME_FIELD), "Lê Châu Sỷ Đạt")
         );
     }
 

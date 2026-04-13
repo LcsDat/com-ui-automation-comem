@@ -19,8 +19,8 @@ public class HeaderComponent extends BaseComponent<HeaderComponent> {
     private static final String PERSON_ICON_AFTER_LOGIN = "div.icon-member-active";
 
     //Personal Information page
-    private static final String EMAIL_FIELD = "input[name='email'][class='form__control form__control--full']";
-    private static final String NAME_FIELD = "input[name='fullname'][class='form__control form__control--full']";
+    public static final String EMAIL_FIELD = "input[name='email'][class='form__control form__control--full']";
+    public static final String NAME_FIELD = "input[name='fullname'][class='form__control form__control--full']";
 
     @Step("Click on Account icon")
     public HeaderComponent clickOnAccountIcon() {
@@ -46,21 +46,21 @@ public class HeaderComponent extends BaseComponent<HeaderComponent> {
         return self();
     }
 
+    @Step("Hover Person Icon")
     public HeaderComponent hoverPersonIcon() {
         hover(PERSON_ICON_AFTER_LOGIN);
         return self();
     }
 
+    @Step("Click Personal Information Link")
     public HeaderComponent clickOnPersonalInformationLink() {
         click(PERSONAL_INFORMATION_LINK);
         return self();
     }
 
-    public String getEmailValue() {
-        return getDomAttributeValue(EMAIL_FIELD, "value");
+    @Step("Get {0} value")
+    public String getValue(String fieldName) {
+        return getDomAttributeValue(fieldName, "value");
     }
 
-    public String getNameValue() {
-        return getDomAttributeValue(NAME_FIELD, "value");
-    }
 }

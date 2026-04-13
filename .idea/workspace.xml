@@ -7,27 +7,57 @@
     <list default="true" id="f55db7b7-bacc-489b-8c7c-9c62208d3fe3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/components/HeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/HeaderComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/BaseComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BaseComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/Browser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cores/GlobalVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/GlobalVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/infrastructure/reports/AllureListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/infrastructure/reports/AllureListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Demo1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/comem/authentication/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comem/authentication/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Refactor.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestCases.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/07d93b28-6a37-4eca-9ea1-6e54bd937fb4-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/0a103e99-17cd-4a37-90fc-140c4647e4c0-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1e22c026-fe58-4daa-abda-32ca6f8ed3ab-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1e6d6830-cedc-4efc-ab34-ea414e1f8128-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2abfd6af-8482-4df1-8380-fe05dc52e3b7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2d494d57-fcbe-459e-89e2-b360647cb6ff-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2e1b875d-c9e7-4c02-94e2-f2216bf4581c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/318ab48e-2b30-4db4-9ed9-43c0b80f79d7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/341862f2-af2a-46b8-9b0d-28fd33d24841-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/41b2ea12-01a5-4ac0-8d0d-cf98443848b3-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/468c483a-c844-4cb1-98dc-9d3e00ab6516-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/661e5955-fb5a-436f-a09e-c26a09444788-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/6c613a3c-040b-4108-99d9-588f8c0756de-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/6e3b81a3-d55a-46db-b6c9-38994db825ea-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7094b776-0979-4db8-b084-69d853017f3a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/79c623ff-94d0-4b1b-b203-d05f7c466c0a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/809e29aa-fabd-4b6f-ba15-b208ecd45b69-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/815142d0-c3ea-4671-9a75-b5108cc5a794-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/88420617-5bdf-4fa0-bd6e-eb1504b82974-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a5d19aa0-e366-47a7-a031-f3c064553c7e-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ae16579f-cc48-491b-98bb-6af42342f8d1-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b93f9be7-c4ea-4eb6-9b62-9e5515fd26a7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ba0cdcef-1511-4392-9021-93ce886c8770-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c74d108b-5570-450e-bd39-55f6b74b4aee-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c8c4b862-649e-4a54-84fe-b1133a01cb3b-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/cabccc72-2944-442b-a744-2316fc751a65-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/cae9eeea-f0d6-4416-966a-072f7d4bd9d9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/de758de9-9dd9-4506-b094-580b44e84472-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e3cfb9a7-0f0c-4190-85aa-2f6d76203398-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e78048fd-6a00-45df-b57f-2e392cdfc04d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/eb806e93-d66c-461b-b76d-25d29eaa22ba-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ec63beb2-0496-409d-a281-f924084fc6fd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ef6b822e-bb25-41b6-9f18-970d71175153-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/executor.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/components/HeaderComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/components/HeaderComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cores/BaseComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/BaseComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cores/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cores/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cores/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/Browser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cores/CustomAssert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/CustomAssert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cores/TestNGListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/TestNGListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cores/WebsiteDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cores/WebsiteDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/demo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/infrastructure/logs/Log4j2Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/infrastructure/logs/Log4j2Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/ExcelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/ExcelManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/TestData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/infrastructure/reports/AllureListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/infrastructure/reports/AllureListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Suite1/Co Mem on Chrome.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Suite1/Co Mem on Chrome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Suite1/Co Mem on Chrome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Suite1/Co Mem on Chrome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-comem.authentication.LoginTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-comem.authentication.LoginTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Suite1/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Demo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Demo1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/comem/authentication/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/comem/authentication/LoginTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,40 +102,41 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Demo1.executor": "Run",
-    "Application.ExcelManager.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHELLCHECK.PATH": "/Users/hideyashy/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/Shell Script/shellcheck",
-    "TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml.executor": "Run",
-    "TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml.executor": "Run",
-    "TestNG.D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml.executor": "Run",
-    "TestNG.D:/Work/Training/Automation-Testing/src/main/resources/demo.xml.executor": "Run",
-    "TestNG.Demo1.test.executor": "Run",
-    "TestNG.Demo2.executor": "Run",
-    "TestNG.Demo2.testGoogleSearch.executor": "Run",
-    "TestNG.ExcelManager.test.executor": "Run",
-    "TestNG.User_Order_One_Product.TC01_Order_A_Product_Successfully.executor": "Run",
-    "TestNG.User_Order_One_Product.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "LcsDat",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.32669684",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Demo1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExcelManager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/hideyashy/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/Shell Script/shellcheck&quot;,
+    &quot;TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.D:/Work/Training/Automation-Testing/src/main/resources/demo.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Demo1.test.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Demo2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Demo2.testGoogleSearch.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ExcelManager.test.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTests.verifyPositiveCaseLogIn.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.User_Order_One_Product.TC01_Order_A_Product_Successfully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.User_Order_One_Product.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LcsDat&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32669684&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -127,74 +158,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com-ui-comem" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/HasakiTestRunner.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com-ui-comem" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Demo2" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="User_Order_One_Product.TC01_Order_A_Product_Successfully" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com-ui-comem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hasaki.OrderFlow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/HasakiTestRunner.xml" />
-      <option name="PACKAGE_NAME" value="hasaki.OrderFlow" />
-      <option name="MAIN_CLASS_NAME" value="hasaki.OrderFlow.User_Order_One_Product" />
-      <option name="METHOD_NAME" value="TC01_Order_A_Product_Successfully" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="2" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com-ui-comem" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/CoMemTestRunner.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com-ui-comem" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/LouisVuitonTestRunner.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Demo1" />
+      <item itemvalue="TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/CoMemTestRunner.xml" />
-        <item itemvalue="TestNG./Users/hideyashy/IdeaProjects/Automation-Testing/src/main/resources/LouisVuitonTestRunner.xml" />
-        <item itemvalue="TestNG.D:/Work/Training/Automation-Testing/src/main/resources/HasakiTestRunner.xml" />
-        <item itemvalue="TestNG.User_Order_One_Product.TC01_Order_A_Product_Successfully" />
-        <item itemvalue="TestNG.Demo2" />
       </list>
     </recent_temporary>
   </component>
