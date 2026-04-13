@@ -1,12 +1,12 @@
 package pages;
 
 import cores.BasePage;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 import org.openqa.selenium.Keys;
 
 public class ProductDetailsPage extends BasePage {
 
-    public ProductDetailsPage(WebsiteDriver driver) {
+    public ProductDetailsPage(BrowserDriver driver) {
         super(driver);
     }
 
@@ -78,7 +78,7 @@ public class ProductDetailsPage extends BasePage {
      * Hard method to increase qty one by one.
      */
     public void setProductQty() {
-        driver.waitToBeClickable(INCREASE_QTY_BUTTON).click();
+        driver.waitUntilClickable(INCREASE_QTY_BUTTON).click();
     }
 
     /**

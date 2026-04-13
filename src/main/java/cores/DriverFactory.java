@@ -1,45 +1,42 @@
 package cores;
 
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
 public class DriverFactory {
 
-    public static WebDriver initWebdriver(Browser browser) {
+    public static WebDriver createWebDriver(Browser browser) {
         WebDriver driver = null;
 
         switch (browser) {
             case FIREFOX -> {
-                driver = browser.initFirefoxDriver();
+                driver = browser.createFirefoxDriver();
                 driver.manage().window().maximize();
             }
 
             case CHROME -> {
-                driver = browser.initChromeDriver();
+                driver = browser.createChromeDriver();
                 driver.manage().window().maximize();
             }
 
             case EDGE -> {
-                driver = browser.initEdgeDriver();
+                driver = browser.createEdgeDriver();
                 driver.manage().window().maximize();
             }
 
-            case HEADLESSFIREFOX -> {
-                driver = browser.initHeadlessFirefoxDriver();
+            case HEADLESS_FIREFOX -> {
+                driver = browser.createHeadlessFirefoxDriver();
             }
 
-            case HEADLESSCHROME -> driver = browser.initHeadlessChromeDriver();
+            case HEADLESS_CHROME -> driver = browser.createHeadlessChromeDriver();
 
-            case HEADLESSEDGE -> driver = browser.initHeadlessEdgeDriver();
+            case HEADLESS_EDGE -> driver = browser.createHeadlessEdgeDriver();
+
+            default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalVariables.LONG_TIMEOUT));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.LONG_TIMEOUT));
         return driver;
-    }
-
-    public static WebsiteDriver initWebsiteDriver(Browser browser) {
-        return new WebsiteDriver(browser);
     }
 }

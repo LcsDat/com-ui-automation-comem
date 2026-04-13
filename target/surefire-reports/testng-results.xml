@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-13T09:32:32 GMT+07:00" name="Suite1" finished-at="2026-04-13T09:32:40 GMT+07:00" duration-ms="7704">
+    <groups>
+    </groups>
+    <test started-at="2026-04-13T09:32:32 GMT+07:00" name="Co Mem on Chrome" finished-at="2026-04-13T09:32:40 GMT+07:00" duration-ms="7704">
+      <class name="comem.authentication.LoginTests">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:comem.authentication.LoginTests@36f1046f]" started-at="2026-04-13T09:32:32 GMT+07:00" name="beforeClass" finished-at="2026-04-13T09:32:36 GMT+07:00" duration-ms="3636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://comem.vn/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="verifyNegativeCaseLogIn()[pri:0, instance:comem.authentication.LoginTests@36f1046f]" started-at="2026-04-13T09:32:36 GMT+07:00" name="verifyNegativeCaseLogIn" finished-at="2026-04-13T09:32:36 GMT+07:00" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNegativeCaseLogIn -->
+        <test-method signature="verifyPositiveCaseLogIn()[pri:0, instance:comem.authentication.LoginTests@36f1046f]" started-at="2026-04-13T09:32:36 GMT+07:00" name="verifyPositiveCaseLogIn" finished-at="2026-04-13T09:32:40 GMT+07:00" duration-ms="4005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPositiveCaseLogIn -->
+      </class> <!-- comem.authentication.LoginTests -->
+    </test> <!-- Co Mem on Chrome -->
+  </suite> <!-- Suite1 -->
+</testng-results>

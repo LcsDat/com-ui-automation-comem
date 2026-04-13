@@ -1,10 +1,10 @@
 package pages;
 
 import cores.BasePage;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 
 public class FAQPage extends BasePage {
-    public FAQPage(WebsiteDriver driver) {
+    public FAQPage(BrowserDriver driver) {
         super(driver);
     }
 

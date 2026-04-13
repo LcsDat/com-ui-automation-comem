@@ -1,11 +1,11 @@
 package pages;
 
 import cores.BasePage;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 
 public class CartPage extends BasePage {
 
-    public CartPage(WebsiteDriver driver) {
+    public CartPage(BrowserDriver driver) {
         super(driver);
     }
 

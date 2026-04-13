@@ -1,10 +1,10 @@
 package pages;
 
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 
-public class ProductsPage extends HomeProductCommons {
+public class ProductsPage extends HomePageComponents {
 
-    public ProductsPage(WebsiteDriver driver) {
+    public ProductsPage(BrowserDriver driver) {
         super(driver);
     }
 
@@ -12,11 +12,11 @@ public class ProductsPage extends HomeProductCommons {
     private static final String PRODUCT_NAME_2nd = "//h2[text()=\"%s\"]";
 
     public void chooseProduct(String productName) {
-        tryClickLocators(new String[]{PRODUCT_NAME, PRODUCT_NAME_2nd}, productName);
+        clickFirstMatching(new String[]{PRODUCT_NAME, PRODUCT_NAME_2nd}, productName);
     }
 
     public void chooseProductOnFirefox(String productName) {
-        driver.doubleClickByActions(ProductsPage.PRODUCT_NAME, productName);
+        driver.doubleClick(ProductsPage.PRODUCT_NAME, productName);
     }
 
 }

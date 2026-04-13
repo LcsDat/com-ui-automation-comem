@@ -1,6 +1,6 @@
 package utilities;
 
-import cores.GlobalVariables;
+import cores.Constants;
 import org.testng.annotations.DataProvider;
 
 import java.io.File;
@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 
 public class TestData {
 
-    private static String resourcePath = GlobalVariables.PROJECTPATH
+    private static String resourcePath = Constants.PROJECTPATH
             + File.separator +"src"
             + File.separator + "main"
             + File.separator +"resources";

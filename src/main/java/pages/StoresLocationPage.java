@@ -1,11 +1,11 @@
 package pages;
 
 import cores.BasePage;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 
 public class StoresLocationPage extends BasePage {
 
-    public StoresLocationPage(WebsiteDriver driver) {
+    public StoresLocationPage(BrowserDriver driver) {
         super(driver);
     }
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <!-- ANSI color codes -->
+        <Property name="CONSOLE_LOG_INFO_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]   %highlight{%level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=bright blue, DEBUG=cyan, TRACE=green}     %-50logger{50} |   %style{%msg%n}{bright,yellow} </Property>
+        <Property name="CONSOLE_LOG_ASSERT_PASS_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]    ✅       %-50logger{50} |   %style{%msg%n}{bright,green}</Property>
+        <Property name="CONSOLE_LOG_ASSERT_FAIL_PATTERN">🎦  %style{%-13d{HH:mm:ss a}}{bright,cyan} [%t]    ❌       %-50logger{50} |   %style{%msg%n}{bright,red}</Property>
+
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${CONSOLE_LOG_INFO_PATTERN}" disableAnsi="false"/>
+        </Console>
+
+        <Console name="AssertionPass" target="SYSTEM_OUT">
+            <PatternLayout pattern="${CONSOLE_LOG_ASSERT_PASS_PATTERN}" disableAnsi="false"/>
+        </Console>
+        <Console name="AssertionFail" target="SYSTEM_OUT">
+            <PatternLayout pattern="${CONSOLE_LOG_ASSERT_FAIL_PATTERN}" disableAnsi="false"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="assertionsPass" level="INFO" additivity="false">
+            <AppenderRef ref="AssertionPass"/>
+        </Logger>
+
+        <Logger name="assertionsFail" level="ERROR" additivity="false">
+            <AppenderRef ref="AssertionFail"/>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
