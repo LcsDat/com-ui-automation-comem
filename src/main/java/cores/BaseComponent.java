@@ -1,11 +1,9 @@
 package cores;
 
-import org.openqa.selenium.By;
-
 public abstract class BaseComponent<T extends BaseComponent<T>> {
-    protected WebsiteDriver driver;
+    protected BrowserDriver driver;
 
-    public BaseComponent(WebsiteDriver driver) {
+    public BaseComponent(BrowserDriver driver) {
         this.driver = driver;
     }
 
@@ -19,13 +17,13 @@ public abstract class BaseComponent<T extends BaseComponent<T>> {
         return self();
     }
 
-    public T sleep(int seconds) {
+    public T pause(long seconds) {
         try {
             Thread.sleep(seconds*1000);
         } catch (InterruptedException e) {}
         return self();
     }
-    public T input(String locator, String value) {
+    public T setText(String locator, String value) {
         driver.setText(locator, value);
         return self();
     }
@@ -35,7 +33,7 @@ public abstract class BaseComponent<T extends BaseComponent<T>> {
         return self();
     }
 
-    public String getDomAttributeValue (String locator, String attributeValue) {
+    public String getDomAttribute(String locator, String attributeValue) {
         return  driver.getDomAttribute(locator, attributeValue);
     }
 }

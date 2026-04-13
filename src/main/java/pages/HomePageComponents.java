@@ -1,13 +1,13 @@
 package pages;
 
 import cores.BasePage;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 
 /**
  * A class which keep common elements in Homepage and ProductPage
  */
 public class HomePageComponents extends BasePage {
-    public HomePageComponents(WebsiteDriver driver) {
+    public HomePageComponents(BrowserDriver driver) {
         super(driver);
     }
 
@@ -47,26 +47,26 @@ public class HomePageComponents extends BasePage {
     public void loginByFacebook(){
 
         driver.click(HOME_LOGIN_BUTTON);
-        sleepInSecond(3);
+        pause(3);
         driver.click(HOME_LOGIN_BY_FACEBOOK_BUTTON);
-        sleepInSecond(3);
+        pause(3);
         driver.switchWindowByTitle("Log in to Facebook");
-        sleepInSecond(3);
+        pause(3);
         driver.setText("#email", "hideyashy11@gmail.com");
-        sleepInSecond(3);
+        pause(3);
         driver.setText("#pass", "#Onimusha00");
-        sleepInSecond(3);
+        pause(3);
         driver.click("#loginbutton");
-        sleepInSecond(3);
+        pause(3);
 
         driver.click("//span[contains(text(),'Tiếp tục dưới')]");
-        sleepInSecond(3);
+        pause(3);
         driver.switchWindowByTitle("Hasaki.vn | Mỹ Phẩm & Clinic");
-        sleepInSecond(3);
+        pause(3);
     }
 
     public void login(String username, String password) {
-        driver.waitToBeClickable(HOME_LOGIN_BUTTON).click();
+        driver.waitUntilClickable(HOME_LOGIN_BUTTON).click();
         setTextToUsernameInput(username);
         setTextToPasswordInput(password);
         clickToLoginButton();
@@ -81,7 +81,7 @@ public class HomePageComponents extends BasePage {
     }
 
     public void clickToProductType(String productType) {
-        driver.waitToBeClickable(PRODUCT_TYPE, productType).click();
+        driver.waitUntilClickable(PRODUCT_TYPE, productType).click();
     }
 
     /**

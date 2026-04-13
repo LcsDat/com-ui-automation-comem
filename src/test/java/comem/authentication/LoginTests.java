@@ -2,13 +2,11 @@ package comem.authentication;
 
 import cores.BaseTest;
 import cores.Browser;
-import cores.DriverFactory;
+import cores.PageProvider;
 import io.qameta.allure.*;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pages.HomePage;
 
 @Feature("Authentication")
 public class LoginTests extends BaseTest {
@@ -16,10 +14,9 @@ public class LoginTests extends BaseTest {
     @BeforeClass
     @Parameters("url")
     private void beforeClass(String url) {
-        createLog(LoginTests.class);
-        webDriver = DriverFactory.initWebsiteDriver(Browser.CHROME);
-        webdriverThread.set(webDriver);
-        homepage = new HomePage(webDriver);
+        initLogger(LoginTests.class);
+        webDriver = initDriver(Browser.CHROME);
+        homepage = PageProvider.createHomePage(webDriver);
         webDriver.navigate(url);
     }
 

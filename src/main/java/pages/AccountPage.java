@@ -1,10 +1,10 @@
 package pages;
 
 import cores.BasePage;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 
 public class AccountPage extends BasePage {
-    public AccountPage(WebsiteDriver driver) {
+    public AccountPage(BrowserDriver driver) {
         super(driver);
     }
 

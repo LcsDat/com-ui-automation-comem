@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public final class GlobalVariables {
+public final class Constants {
     public static final String PROJECTPATH = System.getProperty("user.dir");
     public static final String JAVA_VERSION = System.getProperty("java.version");
     public static final long LONG_TIMEOUT = 25;

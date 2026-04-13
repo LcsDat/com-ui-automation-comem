@@ -1,12 +1,12 @@
 package pages;
 
 import cores.BasePage;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 
 public class PaymentPage extends BasePage {
-    public PaymentPage(WebsiteDriver driver) {
+    public PaymentPage(BrowserDriver driver) {
         super(driver);
     }
 
@@ -37,7 +37,7 @@ public class PaymentPage extends BasePage {
     }
 
     public Boolean waitForMessageInvisible(String message){
-        return waitToBeInvisible(SUCCESS_MESSAGE, message);
+        return waitUntilInvisible(SUCCESS_MESSAGE, message);
     }
     /**
      * Delete a delivery address
@@ -69,7 +69,7 @@ public class PaymentPage extends BasePage {
 //            driver.waitToBeClickable(CONTINUE_BUTTON_2nd, popupName).click();
 //        }
 
-        tryClickLocators(new String[]{CONTINUE_BUTTON, CONTINUE_BUTTON_2nd}, popupName);
+        clickFirstMatching(new String[]{CONTINUE_BUTTON, CONTINUE_BUTTON_2nd}, popupName);
     }
 
     public String getCommonValidationMessageInput(String inputName) {
@@ -102,7 +102,7 @@ public class PaymentPage extends BasePage {
     }
 
     public void clickStreetField() {
-        driver.waitToBeClickable(STREET_NUMBER_INPUT).click();
+        driver.waitUntilClickable(STREET_NUMBER_INPUT).click();
     }
 
     public void setTextStreetField(String value) {

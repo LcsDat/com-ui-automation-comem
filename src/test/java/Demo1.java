@@ -1,8 +1,3 @@
-import cores.Browser;
-import cores.DriverFactory;
-import cores.WebsiteDriver;
-import org.openqa.selenium.Keys;
-
 import java.nio.file.Paths;
 
 public class Demo1 {

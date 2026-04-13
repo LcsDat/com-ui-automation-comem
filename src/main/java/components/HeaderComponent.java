@@ -1,12 +1,12 @@
 package components;
 
 import cores.BaseComponent;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 import io.qameta.allure.Step;
 
 public class HeaderComponent extends BaseComponent<HeaderComponent> {
 
-    public HeaderComponent(WebsiteDriver driver) {
+    public HeaderComponent(BrowserDriver driver) {
         super(driver);
     }
 
@@ -30,13 +30,13 @@ public class HeaderComponent extends BaseComponent<HeaderComponent> {
 
     @Step("Input username: {value}")
     public HeaderComponent inputUsername(String value) {
-        input(USERNAME_INPUT, value);
+        setText(USERNAME_INPUT, value);
         return self();
     }
 
     @Step("Input password")
     public HeaderComponent inputPassword(String value) {
-        input(PASSWORD_INPUT, value);
+        setText(PASSWORD_INPUT, value);
         return self();
     }
 
@@ -60,7 +60,7 @@ public class HeaderComponent extends BaseComponent<HeaderComponent> {
 
     @Step("Get {0} value")
     public String getValue(String fieldName) {
-        return getDomAttributeValue(fieldName, "value");
+        return getDomAttribute(fieldName, "value");
     }
 
 }

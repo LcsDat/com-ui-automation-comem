@@ -2,23 +2,19 @@ package cores;
 
 import org.openqa.selenium.*;
 
-import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
-
-public class WebsiteElement {
+public class UIElement {
 
     private WebElement element;
-    private WebsiteDriver customDriver;
+    private BrowserDriver customDriver;
 
-    public WebsiteElement(WebsiteDriver websiteDriver, String locator) {
-        customDriver = websiteDriver;
-        element = customDriver.findDefaultWebElement(locator);
+    public UIElement(BrowserDriver browserDriver, String locator) {
+        customDriver = browserDriver;
+        element = customDriver.findNativeElement(locator);
     }
 
-    public WebsiteElement(WebsiteDriver websiteDriver, String locator, String... varargs) {
-        customDriver = websiteDriver;
-        element = customDriver.findDefaultWebElement(locator, varargs);
+    public UIElement(BrowserDriver browserDriver, String locator, String... varargs) {
+        customDriver = browserDriver;
+        element = customDriver.findNativeElement(locator, varargs);
     }
 
     public WebElement getElement() {

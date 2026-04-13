@@ -1,7 +1,7 @@
 package infrastructure.reports;
 
 import cores.BaseTest;
-import cores.WebsiteDriver;
+import cores.BrowserDriver;
 import io.qameta.allure.Allure;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -215,11 +215,11 @@ public class AllureListener implements ITestListener, ISuiteListener {
     }
 
     private void attachScreenshot() {
-        WebsiteDriver driver = BaseTest.webdriverThread.get();
+        BrowserDriver driver = BaseTest.driverThread.get();
         if (driver == null) return;
 
         try {
-            byte[] screenshotBytes = Base64.getDecoder().decode(driver.takeScreenshotBASE64());
+            byte[] screenshotBytes = Base64.getDecoder().decode(driver.takeScreenshotBase64());
             Allure.addAttachment("Screenshot", "image/png", new ByteArrayInputStream(screenshotBytes), "png");
         } catch (Exception ignored) {
         }
