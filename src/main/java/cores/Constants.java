@@ -1,13 +1,18 @@
 package cores;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public final class Constants {
-    public static final String PROJECTPATH = System.getProperty("user.dir");
+    public static final String PROJECT_PATH = System.getProperty("user.dir");
+    public static final String RESOURCES_PATH = PROJECT_PATH + File.separator
+            + "src"+ File.separator
+            + "main"+ File.separator
+            + "resources";
     public static final String JAVA_VERSION = System.getProperty("java.version");
-    public static final long LONG_TIMEOUT = 25;
+    public static final long LONG_TIMEOUT = 60;
     public static final long SHORT_TIMEOUT = 5;
 
     public static final char CHECK_ICON = (char) 10004;
