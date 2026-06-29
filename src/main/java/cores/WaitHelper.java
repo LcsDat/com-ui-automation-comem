@@ -1,5 +1,6 @@
 package cores;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,43 +20,41 @@ public class WaitHelper {
         wait = new WebDriverWait(driver.getDriver(), timeout);
     }
 
-    private UIElement resolveElement(String locator){
-        return new UIElement(driver, locator);
+    private By resolveBy(String locator) {
+        if (locator.startsWith("/") || locator.startsWith("(")) return By.xpath(locator);
+        if (locator.startsWith("#") || locator.startsWith(".")) return By.cssSelector(locator);
+        return By.cssSelector(locator);
     }
 
-    private UIElement resolveElement(String locator, String... varargs){
-        return new UIElement(driver, locator, varargs);
+    private By resolveBy(String locator, String... varargs) {
+        return By.xpath(String.format(locator, (Object[]) varargs));
     }
 
     public Boolean waitUntilInvisible(String locator) {
-        return wait.until(ExpectedConditions.invisibilityOf(resolveElement(locator).getElement()));
+        return wait.until(ExpectedConditions.invisibilityOfElementLocated(resolveBy(locator)));
     }
 
     public Boolean waitUntilInvisible(String locator, String... varargs) {
-        return wait.until(ExpectedConditions.invisibilityOf(resolveElement(locator, varargs).getElement()));
+        return wait.until(ExpectedConditions.invisibilityOfElementLocated(resolveBy(locator, varargs)));
     }
 
     public UIElement waitUntilClickable(String locator) {
-        UIElement element = resolveElement(locator);
-        wait.until(ExpectedConditions.elementToBeClickable(element.getElement()));
-        return element;
+        wait.until(ExpectedConditions.elementToBeClickable(resolveBy(locator)));
+        return new UIElement(driver, locator);
     }
 
     public UIElement waitUntilClickable(String locator, String... varargs) {
-        UIElement element = resolveElement(locator, varargs);
-        wait.until(ExpectedConditions.elementToBeClickable(element.getElement()));
-        return element;
+        wait.until(ExpectedConditions.elementToBeClickable(resolveBy(locator, varargs)));
+        return new UIElement(driver, locator, varargs);
     }
 
     public UIElement waitUntilVisible(String locator) {
-        UIElement element = resolveElement(locator);
-        wait.until(ExpectedConditions.visibilityOf(element.getElement()));
-        return element;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(resolveBy(locator)));
+        return new UIElement(driver, locator);
     }
 
     public UIElement waitUntilVisible(String locator, String... varargs) {
-        UIElement element = resolveElement(locator, varargs);
-        wait.until(ExpectedConditions.visibilityOf(element.getElement()));
-        return element;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(resolveBy(locator, varargs)));
+        return new UIElement(driver, locator, varargs);
     }
 }

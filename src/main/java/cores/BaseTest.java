@@ -2,10 +2,14 @@ package cores;
 
 import infrastructure.logs.Log4j2Manager;
 import io.qameta.allure.Allure;
-import org.openqa.selenium.InvalidSelectorException;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import pages.*;
+import utilities.CommonUtils;
+import utilities.ScreenRecorder;
 
+import java.lang.reflect.Method;
 import java.util.Random;
 
 public class BaseTest {
@@ -23,6 +27,9 @@ public class BaseTest {
     //Log instances
     protected static Log4j2Manager log4j2Manager;
 
+    //Recording instance
+    protected ScreenRecorder recorder = new ScreenRecorder();
+
     //Thread instances
     public static final ThreadLocal<BrowserDriver> driverThread = new ThreadLocal<>();
 
@@ -31,6 +38,14 @@ public class BaseTest {
         webDriver = new BrowserDriver(browser);
         driverThread.set(webDriver);
         return driverThread.get();
+    }
+
+    protected void startRecording(Method method) {
+        recorder.start(method.getName());
+    }
+
+    protected void stopRecording() {
+        recorder.stop();
     }
 
     @AfterSuite(alwaysRun = true)
@@ -52,11 +67,7 @@ public class BaseTest {
 
     //Util methods ***********************************************************
     protected static void pause(long seconds) {
-        try {
-            Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        CommonUtils.pause(seconds);
     }
 
     protected String randomAlphabetic(int targetLength) {
@@ -72,76 +83,31 @@ public class BaseTest {
     }
 
     //Assertion methods ***********************************************************
-    protected void assertTrue(boolean condition, String message) {
+    private void doAssert(Runnable assertion, String type, String message) {
         var className = this.getClass().getName();
-
         try {
-            LoggingAssert.assertTrue(condition);
-            log4j2Manager.getAssertionPassLogger(className).info("{} ====> PASS", message);
+            assertion.run();
+            log4j2Manager.getAssertionPassLogger(className)
+                    .info("[{}] {} — PASS", type, message);
         } catch (Throwable e) {
-            log4j2Manager.getAssertionFailLogger(className).error("Assert True is FAILED: {}", e.getMessage());
+            log4j2Manager.getAssertionFailLogger(className)
+                    .error("[{}] {} — FAILED: {}", type, message, e.getMessage());
             throw e;
         }
     }
 
-    protected void assertTrue(boolean condition) {
-        var className = this.getClass().getName();
-
-        try {
-            LoggingAssert.assertTrue(condition);
-            log4j2Manager.getAssertionPassLogger(className).info("Assert True is PASS");
-        } catch (Throwable e) {
-            log4j2Manager.getAssertionFailLogger(className).error("Assert True is FAILED: {}", e.getMessage());
-            throw e;
-        }
+    protected void assertTrue(boolean condition, String message) {
+        doAssert(() -> LoggingAssert.assertTrue(condition), "assertTrue", message);
     }
 
     protected void assertFalse(boolean condition, String message) {
-        var className = this.getClass().getName();
-
-        try {
-            LoggingAssert.assertFalse(condition);
-            log4j2Manager.getAssertionPassLogger(className).info("{} ====> PASS", message);
-        } catch (Throwable e) {
-            log4j2Manager.getAssertionFailLogger(className).error("Assert False is FAILED: {}", e.getMessage());
-            throw e;
-        }
-    }
-
-    protected void assertFalse(boolean condition) {
-        var className = this.getClass().getName();
-
-        try {
-            LoggingAssert.assertFalse(condition);
-            log4j2Manager.getAssertionPassLogger(className).info("Assert False is PASS");
-        } catch (Throwable e) {
-            log4j2Manager.getAssertionFailLogger(className).error("Assert False is FAILED: {}", e.getMessage());
-            throw e;
-        }
+        doAssert(() -> LoggingAssert.assertFalse(condition), "assertFalse", message);
     }
 
     protected void assertEquals(Object actual, Object expected, String message) {
-        var className = this.getClass().getName();
-
-        try {
-            LoggingAssert.assertEquals(actual, expected);
-            log4j2Manager.getAssertionPassLogger(className).info("{}: [Actual: {}] and [Expected: {}] ====> PASS", message, actual, expected);
-        } catch (Throwable e) {
-            log4j2Manager.getAssertionFailLogger(className).error("[Actual: {}] [but Expected: {}]", actual, expected);
-            throw e;
-        }
-    }
-
-    protected void assertEquals(Object actual, Object expected) {
-        var className = this.getClass().getName();
-
-        try {
-            LoggingAssert.assertEquals(actual, expected);
-            log4j2Manager.getAssertionPassLogger(className).info("[Actual: {}] and [Expected: {}] ====> PASS", actual, expected);
-        } catch (Throwable e) {
-            log4j2Manager.getAssertionFailLogger(className).error("[Actual: {}] but [Expected: {}]", actual, expected);
-            throw e;
-        }
+        doAssert(() -> LoggingAssert.assertEquals(actual, expected),
+                "assertEquals",
+                message + " | Actual: \"" + actual + "\" — Expected: \"" + expected + "\"");
     }
 
     //Simple verify

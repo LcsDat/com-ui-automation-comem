@@ -1,13 +1,18 @@
 package cores;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.File;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public final class Constants {
-    public static final String PROJECTPATH = System.getProperty("user.dir");
+    public static final String PROJECT_PATH = System.getProperty("user.dir");
+    public static final String RESOURCES_PATH = PROJECT_PATH + File.separator
+            + "src"+ File.separator
+            + "main"+ File.separator
+            + "resources";
     public static final String JAVA_VERSION = System.getProperty("java.version");
-    public static final long LONG_TIMEOUT = 25;
+    public static final long LONG_TIMEOUT = 60;
     public static final long SHORT_TIMEOUT = 5;
 
     public static final char CHECK_ICON = (char) 10004;
@@ -23,5 +28,6 @@ public final class Constants {
 
     public static final String COMEM_KEYWORD = "comem";
 
-    public static final String FORMAT_TIME = new SimpleDateFormat("hh:mm:ss a", Locale.US).format(new Date());
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss a", Locale.US);
+    public static String formatTime() { return LocalTime.now().format(TIME_FORMATTER); }
 }

@@ -13,16 +13,23 @@ public class BrowserDriver {
     private WebDriver driver;
     private ActionsHelper actionsHelper;
     private WaitHelper waitHelper;
+    private JsHelper jsHelper;
     private JavascriptExecutor jsExecutor;
 
     private Duration defaultTimeout = Duration.ofSeconds(Constants.LONG_TIMEOUT);
+    private boolean highlightEnabled = false;
 
     public BrowserDriver(Browser browser) {
         this.driver = DriverFactory.createWebDriver(browser);
         this.actionsHelper = new ActionsHelper(this, defaultTimeout);
         this.waitHelper = new WaitHelper(this, defaultTimeout);
+        this.jsHelper = new JsHelper(this);
         this.jsExecutor = (JavascriptExecutor) driver;
     }
+
+    public JsHelper js() { return jsHelper; }
+
+    public void setHighlight(boolean enabled) { this.highlightEnabled = enabled; }
 
     public WebDriver getDriver() {
         return driver;
@@ -52,7 +59,7 @@ public class BrowserDriver {
      * <b> ONLY</b>  use for Xpath
      *
      * @param locator Xpath locator
-     * @param varargs variables can be flexible edited in the locator
+     * @param varargs variables can be flexibly edited in the locator
      * @return Default WebElement
      * @throws NoSuchElementException Timeout to find the elemtn
      */
@@ -166,33 +173,20 @@ public class BrowserDriver {
     }
 
     public void killDriverProcess() {
-        String cmdChrome = null;
-        String cmdFirefox = null;
+        String browserDriverName = getBrowserDriverName();
+        if (browserDriverName == null) return;
+
+        String osName = System.getProperty("os.name").toLowerCase();
+        boolean isWindows = osName.contains("window");
+
+        String[] cmd = isWindows
+                ? new String[]{"cmd.exe", "/c", "taskkill /F /IM " + browserDriverName + ".exe /T"}
+                : new String[]{"/bin/sh", "-c", "pkill -f " + browserDriverName};
         try {
-            String osName = System.getProperty("os.name").toLowerCase();
-            String browserDriverName = getBrowserDriverName();
-
-            if (osName.contains("window")) {
-                cmdChrome = "taskkill /F /IM chromedriver.exe /T";
-                cmdFirefox = "taskkill /F /IM geckodriver.exe /T";
-            } else {
-                cmdChrome = "pkill -f chromedriver";
-                cmdFirefox = "pkill -f geckodriver";
-            }
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        } finally {
-            try {
-                Process process1 = Runtime.getRuntime().exec(cmdChrome);
-                process1.waitFor();
-                Process process2 = Runtime.getRuntime().exec(cmdFirefox);
-                process2.waitFor();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            Process process = Runtime.getRuntime().exec(cmd);
+            process.waitFor();
+        } catch (IOException | InterruptedException e) {
+            System.out.println("[Warn] Kill driver process failed: " + e.getMessage());
         }
     }
 
@@ -205,7 +199,7 @@ public class BrowserDriver {
             flag = true;
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(defaultTimeout);
 
         return flag;
     }
@@ -301,26 +295,32 @@ public class BrowserDriver {
     }
 
     public void click(String locator) {
+        if (highlightEnabled) jsHelper.highlightElement(locator);
         findElement(locator).click();
     }
 
     public void click(String locator, String... varargs) {
+        if (highlightEnabled) jsHelper.highlightElement(locator, varargs);
         findElement(locator, varargs).click();
     }
 
     public void setText(String locator, String value) {
+        if (highlightEnabled) jsHelper.highlightElement(locator);
         findElement(locator).setText(value);
     }
 
     public void setText(String locator, String value, String... varargs) {
+        if (highlightEnabled) jsHelper.highlightElement(locator, varargs);
         findElement(locator, varargs).setText(value);
     }
 
     public void clear(String locator) {
+        if (highlightEnabled) jsHelper.highlightElement(locator);
         findElement(locator).clear();
     }
 
     public void clear(String locator, String... varargs) {
+        if (highlightEnabled) jsHelper.highlightElement(locator, varargs);
         findElement(locator, varargs).clear();
     }
 

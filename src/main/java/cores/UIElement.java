@@ -2,19 +2,50 @@ package cores;
 
 import org.openqa.selenium.*;
 
+import java.util.function.Supplier;
+
 public class UIElement {
 
     private WebElement element;
-    private BrowserDriver customDriver;
+    private final BrowserDriver customDriver;
+    private final String locator;
+    private final String[] varargs;
+    private static final int MAX_RETRIES = 2;
 
     public UIElement(BrowserDriver browserDriver, String locator) {
-        customDriver = browserDriver;
-        element = customDriver.findNativeElement(locator);
+        this.customDriver = browserDriver;
+        this.locator = locator;
+        this.varargs = null;
+        this.element = customDriver.findNativeElement(locator);
     }
 
     public UIElement(BrowserDriver browserDriver, String locator, String... varargs) {
-        customDriver = browserDriver;
-        element = customDriver.findNativeElement(locator, varargs);
+        this.customDriver = browserDriver;
+        this.locator = locator;
+        this.varargs = varargs;
+        this.element = customDriver.findNativeElement(locator, varargs);
+    }
+
+    private void refind() {
+        element = (varargs != null)
+                ? customDriver.findNativeElement(locator, varargs)
+                : customDriver.findNativeElement(locator);
+    }
+
+    private <T> T withRetry(Supplier<T> action) {
+        for (int i = 0; i <= MAX_RETRIES; i++) {
+            try {
+                return action.get();
+            } catch (StaleElementReferenceException e) {
+                if (i == MAX_RETRIES) throw e;
+                refind();
+            }
+        }
+        throw new StaleElementReferenceException("Max retries exceeded for: " + locator);
+    }
+
+    private void withRetryVoid(Runnable action) {
+        withRetry(() -> { action.run(); return null; });
     }
 
     public WebElement getElement() {
@@ -22,35 +53,34 @@ public class UIElement {
     }
 
     public void click() {
-        element.click();
+        withRetryVoid(() -> element.click());
     }
 
     public void setText(String value) {
-        element.sendKeys(value);
+        withRetryVoid(() -> element.sendKeys(value));
     }
 
     public String getText() {
-        return element.getText();
+        return withRetry(() -> element.getText());
     }
 
     public String getDomAttribute(String attributeValue) {
-        return element.getDomAttribute(attributeValue);
+        return withRetry(() -> element.getDomAttribute(attributeValue));
     }
 
     public boolean isDisplayed() {
-        return element.isDisplayed();
+        return withRetry(() -> element.isDisplayed());
     }
-
 
     public String getCssValue(String value) {
-        return element.getCssValue(value);
+        return withRetry(() -> element.getCssValue(value));
     }
 
-    public boolean isEnabled(){
-        return element.isEnabled();
+    public boolean isEnabled() {
+        return withRetry(() -> element.isEnabled());
     }
 
-    public void clear(){
-        element.clear();
+    public void clear() {
+        withRetryVoid(() -> element.clear());
     }
 }

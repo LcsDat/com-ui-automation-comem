@@ -43,7 +43,7 @@ import java.util.stream.Stream;
  *
  * To open a specific report, just open the HTML file directly in any browser.
  */
-public class AllureListener extends  BaseTest implements ITestListener, ISuiteListener {
+public class AllureListener implements ITestListener, ISuiteListener {
 
     private static final int MAX_RECORDS = 20;
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");

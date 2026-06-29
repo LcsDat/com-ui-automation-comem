@@ -7,7 +7,6 @@ import org.apache.logging.log4j.core.LoggerContext;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Log4j2Manager {
-    private static Log4j2Manager log4jManager;
     private Logger infoLogger;
     private Logger assertionPassLogger;
     private Logger assertionFailLogger;
@@ -51,18 +50,6 @@ public class Log4j2Manager {
         assertFailMap.put(clazz.getName(), assertionFailLogger);
     }
 
-    private Log4j2Manager(Object object) {
-        infoLogger = LogManager.getLogger(object);
-        assertionPassLogger = LogManager.getLogger("assertionsPass." + object.getClass().getSimpleName());
-        assertionFailLogger = LogManager.getLogger("assertionsFail." + object.getClass().getSimpleName());
-
-        waitForLoggerStarted();
-
-        infoMap.put(object.getClass().getName(), infoLogger);
-        assertPassMap.put(object.getClass().getName(), assertionPassLogger);
-        assertFailMap.put(object.getClass().getName(), assertionFailLogger);
-    }
-
     public Logger getAssertionFailLogger() {
         return assertionFailLogger;
     }
@@ -89,14 +76,7 @@ public class Log4j2Manager {
 
 
     public static Log4j2Manager getLogger(Class<?> clazz) {
-            log4jManager = new Log4j2Manager(clazz);
-        return log4jManager;
-    }
-
-
-    public static Log4j2Manager getLogger(Object object) {
-            log4jManager = new Log4j2Manager(object);
-        return log4jManager;
+        return new Log4j2Manager(clazz);
     }
 
     public void logInfo(String message, Object... params) {

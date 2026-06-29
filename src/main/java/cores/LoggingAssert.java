@@ -8,19 +8,11 @@ public class LoggingAssert extends Assert {
     private String defaultTrue = "[" + Constants.CHECK_ICON + " True ]";
     private String defaultFalse = "[" + Constants.CHECK_ICON + " False]";
     private String defaultEqual = "[" + Constants.CHECK_ICON + " Equal]";
-    private String pass = "PASS";
-    private String fail = "FAIL";
-    private String failFormat = "%c%s%12s%s%10s%S%5s" + "%s%s%7s" + "%s " + "%s " + "%s%s%s at .(%s:%d) %n";
-    private String passFormat = "%c%s%12s%s%10s%S%5s" + "%s%S%7s";
 
     public LoggingAssert(String keyword) {
         this.keyword = keyword;
     }
 
-    /**
-     * @param e To get StackTraceElements
-     * @return The target StacktraceElement
-     */
     private StackTraceElement getTargetStackElement(Throwable e) {
         StackTraceElement targetStack = null;
         for (StackTraceElement element : e.getStackTrace()) {
@@ -44,80 +36,94 @@ public class LoggingAssert extends Assert {
         return getTargetStackElement(e).getLineNumber();
     }
 
-    public boolean verifyTrue(boolean condition) {
-        boolean result = true;
+    private void printPass(String label) {
+        System.out.printf("%c %s%s%s %s%S%s %s%s%s%n",
+                Constants.CLOCK_ICON,
+                Constants.ANSI_BOLD_CYAN, Constants.formatTime(), Constants.ANSI_RESET,
+                Constants.ANSI_BOLD_CYAN, label, Constants.ANSI_RESET,
+                Constants.ANSI_GREEN, "PASS", Constants.ANSI_RESET);
+    }
 
+    private void printPass(String label, String message) {
+        System.out.printf("%c %s%s%s %s%S%s %s%s%s | %s%s%s%n",
+                Constants.CLOCK_ICON,
+                Constants.ANSI_BOLD_CYAN, Constants.formatTime(), Constants.ANSI_RESET,
+                Constants.ANSI_BOLD_CYAN, label, Constants.ANSI_RESET,
+                Constants.ANSI_GREEN, "PASS", Constants.ANSI_RESET,
+                Constants.ANSI_YELLOW, message, Constants.ANSI_RESET);
+    }
+
+    private void printFail(String label, Throwable e) {
+        StackTraceElement stack = getTargetStackElement(e);
+        System.out.printf("%c %s%s%s %s%S%s %s%s%s %s.%s %s%s%s at .(%s:%d)%n",
+                Constants.CLOCK_ICON,
+                Constants.ANSI_BOLD_CYAN, Constants.formatTime(), Constants.ANSI_RESET,
+                Constants.ANSI_BOLD_CYAN, label, Constants.ANSI_RESET,
+                Constants.ANSI_RED, "FAIL", Constants.ANSI_RESET,
+                getClassName(e), getMethodName(e),
+                Constants.WORD_ORANGE, e.getMessage(), Constants.WORD_RESET,
+                stack.getFileName(), getLineNumber(e));
+    }
+
+    public boolean verifyTrue(boolean condition) {
         try {
             assertTrue(condition);
-            System.out.printf(passFormat + "%n", Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultTrue, Constants.ANSI_RESET, Constants.ANSI_GREEN, pass, Constants.ANSI_RESET);
+            printPass(defaultTrue);
+            return true;
         } catch (Throwable e) {
-            result = false;
-
-            System.out.printf(failFormat
-                    , Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultTrue, Constants.ANSI_RESET, Constants.ANSI_RED, fail, Constants.ANSI_RESET, getClassName(e), getMethodName(e), Constants.WORD_ORANGE, e.getMessage(), Constants.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
+            printFail(defaultTrue, e);
+            return false;
         }
-        return result;
     }
 
     public boolean verifyTrue(boolean condition, String message) {
-        boolean result = true;
         try {
             assertTrue(condition);
-            System.out.printf(passFormat + " | " + Constants.ANSI_YELLOW + message + Constants.ANSI_RESET + "%n", Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultTrue, Constants.ANSI_RESET, Constants.ANSI_GREEN, pass, Constants.ANSI_RESET);
+            printPass(defaultTrue, message);
+            return true;
         } catch (Throwable e) {
-            result = false;
-            System.out.printf(failFormat
-                    , Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultTrue, Constants.ANSI_RESET, Constants.ANSI_RED, fail, Constants.ANSI_RESET, getClassName(e), getMethodName(e), Constants.WORD_ORANGE, e.getMessage(), Constants.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
+            printFail(defaultTrue, e);
+            return false;
         }
-        return result;
     }
 
     public boolean verifyFalse(boolean condition) {
-        boolean result = false;
         try {
             assertFalse(condition);
-            System.out.printf(passFormat + "%n", Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultFalse, Constants.ANSI_RESET, Constants.ANSI_GREEN, pass, Constants.ANSI_RESET);
+            printPass(defaultFalse);
+            return true;
         } catch (Throwable e) {
-            result = true;
-            System.out.printf(failFormat
-                    , Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultFalse, Constants.ANSI_RESET, Constants.ANSI_RED, fail, Constants.ANSI_RESET, getClassName(e), getMethodName(e), Constants.WORD_ORANGE, e.getMessage(), Constants.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
+            printFail(defaultFalse, e);
+            return false;
         }
-        return result;
     }
 
     public boolean verifyFalse(boolean condition, String message) {
-        boolean result = false;
         try {
             assertFalse(condition);
-            System.out.printf(passFormat + " | " + Constants.ANSI_YELLOW + message + Constants.ANSI_RESET + "%n", Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultFalse, Constants.ANSI_RESET, Constants.ANSI_GREEN, pass, Constants.ANSI_RESET);
+            printPass(defaultFalse, message);
+            return true;
         } catch (Throwable e) {
-            result = true;
-            System.out.printf(failFormat
-                    , Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultFalse, Constants.ANSI_RESET, Constants.ANSI_RED, fail, Constants.ANSI_RESET, getClassName(e), getMethodName(e), Constants.WORD_ORANGE, e.getMessage(), Constants.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
+            printFail(defaultFalse, e);
+            return false;
         }
-        return result;
     }
 
     public void verifyEquals(Object actual, Object expected) {
-
         try {
             assertEquals(actual, expected);
-            System.out.printf(passFormat + "%n", Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultEqual, Constants.ANSI_RESET, Constants.ANSI_GREEN, pass, Constants.ANSI_RESET);
+            printPass(defaultEqual);
         } catch (AssertionError e) {
-            System.out.printf(failFormat,
-                    Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultEqual, Constants.ANSI_RESET, Constants.ANSI_RED, fail, Constants.ANSI_RESET, getClassName(e), getMethodName(e), Constants.WORD_ORANGE, e.getMessage(), Constants.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
+            printFail(defaultEqual, e);
         }
     }
 
     public void verifyEquals(Object actual, Object expected, String message) {
-
         try {
             assertEquals(actual, expected);
-            System.out.printf(passFormat + " | " + Constants.ANSI_YELLOW + message + Constants.ANSI_RESET + "%n", Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultEqual, Constants.ANSI_RESET, Constants.ANSI_GREEN, pass, Constants.ANSI_RESET);
+            printPass(defaultEqual, message);
         } catch (AssertionError e) {
-            System.out.printf(failFormat,
-                    Constants.CLOCK_ICON, Constants.ANSI_BOLD_CYAN, Constants.FORMAT_TIME, Constants.ANSI_RESET, Constants.ANSI_BOLD_CYAN, defaultEqual, Constants.ANSI_RESET, Constants.ANSI_RED, fail, Constants.ANSI_RESET, getClassName(e), getMethodName(e), Constants.WORD_ORANGE, e.getMessage(), Constants.WORD_RESET, getTargetStackElement(e).getFileName(), getLineNumber(e));
+            printFail(defaultEqual, e);
         }
     }
-
 }
