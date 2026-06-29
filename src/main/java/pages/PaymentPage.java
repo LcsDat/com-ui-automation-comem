@@ -2,8 +2,11 @@ package pages;
 
 import cores.BasePage;
 import cores.BrowserDriver;
+import cores.Constants;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+
+import java.time.Duration;
 
 public class PaymentPage extends BasePage {
     public PaymentPage(BrowserDriver driver) {
@@ -37,7 +40,7 @@ public class PaymentPage extends BasePage {
     }
 
     public Boolean waitForMessageInvisible(String message){
-        return waitUntilInvisible(SUCCESS_MESSAGE, message);
+        return driver.waitUntilInvisible(SUCCESS_MESSAGE, message);
     }
     /**
      * Delete a delivery address
@@ -69,7 +72,17 @@ public class PaymentPage extends BasePage {
 //            driver.waitToBeClickable(CONTINUE_BUTTON_2nd, popupName).click();
 //        }
 
-        clickFirstMatching(new String[]{CONTINUE_BUTTON, CONTINUE_BUTTON_2nd}, popupName);
+        for (String locator : new String[]{CONTINUE_BUTTON, CONTINUE_BUTTON_2nd}) {
+            try {
+                driver.setImplicitWait(Duration.ofSeconds(Constants.SHORT_TIMEOUT));
+                driver.click(locator, popupName);
+                return;
+            } catch (NoSuchElementException e) {
+                // try next locator
+            } finally {
+                driver.setImplicitWait(Duration.ofSeconds(Constants.LONG_TIMEOUT));
+            }
+        }
     }
 
     public String getCommonValidationMessageInput(String inputName) {

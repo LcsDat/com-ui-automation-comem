@@ -4,9 +4,10 @@ import cores.Constants;
 import org.apache.poi.ss.usermodel.*;
 import org.testng.annotations.DataProvider;
 
-import java.io.File;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -187,6 +188,53 @@ public class ExcelDataReader implements DataReader {
             }
 
         }
+    }
+
+    public File exportSheetToCsv(String excelPath, String sheetName, String csvOutputPath) {
+        File csvFile = new File(csvOutputPath);
+        File parentDir = csvFile.getParentFile();
+        if (parentDir != null) {
+            parentDir.mkdirs();
+        }
+
+        try (Workbook workbook = WorkbookFactory.create(new File(excelPath));
+             BufferedWriter writer = new BufferedWriter(
+                     new OutputStreamWriter(new FileOutputStream(csvFile), StandardCharsets.UTF_8))) {
+
+            writer.write("\uFEFF");
+
+            Sheet sheet = getSheet(workbook, sheetName);
+            int lastRowNum = sheet.getLastRowNum();
+            if (lastRowNum < 0) {
+                throw new IllegalArgumentException("Sheet '" + sheetName + "' is empty");
+            }
+
+            Row headerRow = sheet.getRow(0);
+            int columnCount = headerRow.getLastCellNum();
+
+            for (int rowIdx = 0; rowIdx <= lastRowNum; rowIdx++) {
+                Row row = sheet.getRow(rowIdx);
+                StringBuilder line = new StringBuilder();
+                for (int colIdx = 0; colIdx < columnCount; colIdx++) {
+                    if (colIdx > 0) line.append(",");
+                    String value = (row != null) ? getCellValue(row.getCell(colIdx)) : "";
+                    line.append(escapeCsvField(value));
+                }
+                writer.write(line.toString());
+                writer.write("\n");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to export sheet '" + sheetName + "' to CSV: " + csvOutputPath, e);
+        }
+
+        return csvFile;
+    }
+
+    private String escapeCsvField(String value) {
+        if (value.contains(",") || value.contains("\"") || value.contains("\n") || value.contains("\r")) {
+            return "\"" + value.replace("\"", "\"\"") + "\"";
+        }
+        return value;
     }
 
     @DataProvider(name = "excel")

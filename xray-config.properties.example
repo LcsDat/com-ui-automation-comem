@@ -1,0 +1,20 @@
+# Xray Importer Configuration
+# Copy this file to xray-config.properties and fill in your credentials.
+# xray-config.properties is gitignored — do NOT commit real credentials.
+#
+# Alternatively, set these as environment variables (takes priority over this file):
+#   JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN, JIRA_PROJECT_KEY
+#   XRAY_BASE_URL, XRAY_CLIENT_ID, XRAY_CLIENT_SECRET
+
+jira.base.url=https://your-site.atlassian.net
+jira.email=your-email@company.com
+jira.api.token=your-jira-api-token
+jira.project.key=YOUR_PROJECT_KEY
+
+xray.base.url=https://xray.cloud.getxray.app
+xray.client.id=your-xray-client-id
+xray.client.secret=your-xray-client-secret
+
+# Tempo (for worklog import via TempoImporter)
+# Generate token: Tempo > Settings > API Integration
+tempo.api.token=your-tempo-api-token

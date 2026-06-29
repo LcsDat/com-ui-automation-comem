@@ -1,8 +1,8 @@
 package cores;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public final class Constants {
@@ -28,5 +28,6 @@ public final class Constants {
 
     public static final String COMEM_KEYWORD = "comem";
 
-    public static final String FORMAT_TIME = new SimpleDateFormat("hh:mm:ss a", Locale.US).format(new Date());
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss a", Locale.US);
+    public static String formatTime() { return LocalTime.now().format(TIME_FORMATTER); }
 }

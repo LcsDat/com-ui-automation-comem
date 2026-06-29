@@ -1,5 +1,10 @@
 package cores;
 
+import utilities.CommonUtils;
+import utilities.LocaleManager;
+
+import java.util.List;
+
 public abstract class BaseComponent<T extends BaseComponent<T>> {
     protected BrowserDriver driver;
 
@@ -18,9 +23,7 @@ public abstract class BaseComponent<T extends BaseComponent<T>> {
     }
 
     public T pause(long seconds) {
-        try {
-            Thread.sleep(seconds*1000);
-        } catch (InterruptedException e) {}
+        CommonUtils.pause(seconds);
         return self();
     }
     public T setText(String locator, String value) {
@@ -34,6 +37,22 @@ public abstract class BaseComponent<T extends BaseComponent<T>> {
     }
 
     public String getDomAttribute(String locator, String attributeValue) {
-        return  driver.getDomAttribute(locator, attributeValue);
+        return driver.getDomAttribute(locator, attributeValue);
+    }
+
+    public String getText(String locator) {
+        return driver.getText(locator);
+    }
+
+    public boolean isDisplayed(String locator) {
+        return driver.isDisplayed(locator);
+    }
+
+    public List<UIElement> getElements(String locator) {
+        return driver.findElements(locator);
+    }
+
+    protected String locale(String key) {
+        return LocaleManager.get(key);
     }
 }

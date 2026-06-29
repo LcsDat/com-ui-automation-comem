@@ -2,6 +2,7 @@ package pages;
 
 import cores.BasePage;
 import cores.BrowserDriver;
+import utilities.CommonUtils;
 
 /**
  * A class which keep common elements in Homepage and ProductPage
@@ -47,22 +48,22 @@ public class HomePageComponents extends BasePage {
     public void loginByFacebook(){
 
         driver.click(HOME_LOGIN_BUTTON);
-        pause(3);
+        CommonUtils.pause(3);
         driver.click(HOME_LOGIN_BY_FACEBOOK_BUTTON);
-        pause(3);
+        CommonUtils.pause(3);
         driver.switchWindowByTitle("Log in to Facebook");
-        pause(3);
+        CommonUtils.pause(3);
         driver.setText("#email", "hideyashy11@gmail.com");
-        pause(3);
+        CommonUtils.pause(3);
         driver.setText("#pass", "#Onimusha00");
-        pause(3);
+        CommonUtils.pause(3);
         driver.click("#loginbutton");
-        pause(3);
+        CommonUtils.pause(3);
 
         driver.click("//span[contains(text(),'Tiếp tục dưới')]");
-        pause(3);
+        CommonUtils.pause(3);
         driver.switchWindowByTitle("Hasaki.vn | Mỹ Phẩm & Clinic");
-        pause(3);
+        CommonUtils.pause(3);
     }
 
     public void login(String username, String password) {

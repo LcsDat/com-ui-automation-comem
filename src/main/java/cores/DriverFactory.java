@@ -7,33 +7,17 @@ import java.time.Duration;
 public class DriverFactory {
 
     public static WebDriver createWebDriver(Browser browser) {
-        WebDriver driver = null;
+        WebDriver driver = switch (browser) {
+            case FIREFOX          -> browser.createFirefoxDriver();
+            case CHROME           -> browser.createChromeDriver();
+            case EDGE             -> browser.createEdgeDriver();
+            case HEADLESS_FIREFOX -> browser.createHeadlessFirefoxDriver();
+            case HEADLESS_CHROME  -> browser.createHeadlessChromeDriver();
+            case HEADLESS_EDGE    -> browser.createHeadlessEdgeDriver();
+        };
 
-        switch (browser) {
-            case FIREFOX -> {
-                driver = browser.createFirefoxDriver();
-                driver.manage().window().maximize();
-            }
-
-            case CHROME -> {
-                driver = browser.createChromeDriver();
-                driver.manage().window().maximize();
-            }
-
-            case EDGE -> {
-                driver = browser.createEdgeDriver();
-                driver.manage().window().maximize();
-            }
-
-            case HEADLESS_FIREFOX -> {
-                driver = browser.createHeadlessFirefoxDriver();
-            }
-
-            case HEADLESS_CHROME -> driver = browser.createHeadlessChromeDriver();
-
-            case HEADLESS_EDGE -> driver = browser.createHeadlessEdgeDriver();
-
-            default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
+        if (!browser.name().startsWith("HEADLESS")) {
+            driver.manage().window().maximize();
         }
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.LONG_TIMEOUT));
